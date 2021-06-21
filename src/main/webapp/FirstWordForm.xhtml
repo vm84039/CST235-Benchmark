@@ -6,15 +6,29 @@
       xmlns:p="https://primefaces.org/ui"> 
 
 
-<h:head></h:head> 
-<h:body> 
-      <ui:composition> 
+<h:head>
+	<title>Bible Verse-Find Word</title>
+	<h:outputStylesheet name="css/style.css" />
+	<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Syncopate" />  </h:head> 
+<h:body>
+    	<h:panelGroup id="header" layout="block">
+    		<ui:insert name = "header" >
+      	     	<ui:include src = "/WEB-INF/templates/header.xhtml" />
+   			</ui:insert>
+        </h:panelGroup>
+
          <h:form>
 					<br></br>
-			<h:inputText label="Chose a word to search for: "  id= "search" value="#{bible.search}" required="true"/> &nbsp;<h:message for="search" style="color: red"/>
+			<b>Chose a word to search for:&nbsp;&nbsp;&nbsp;</b>
+			<h:inputText label="search "  id= "search" value="#{bible.search}" required="true"/> &nbsp;<h:message for="search" style="color: red"/>
 
 			<h:commandButton id="submit" value="Submit" action="#{formController.First(bible)}"></h:commandButton>
 		   </h:form>
-      </ui:composition>	
+
+          	<h:panelGroup id="footer" layout="block">
+    		<ui:insert name = "footer" >
+      	     	<ui:include src = "/WEB-INF/templates/footer.xhtml" />
+   			</ui:insert>
+        </h:panelGroup>
 </h:body> 
 </html>
