@@ -1,0 +1,30 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:p="http://primefaces.org/ui">  
+
+<h:head> <h:outputStylesheet name = "css/styles.css"  /> </h:head> 
+<h:body> 
+
+	<ui:composition> 
+		<h:panelGrid id="resourcePanel" columns="4">   
+			<f:facet name = "header">
+            	<h:graphicImage  value = "/resources/images/bible.JPG" class = "index"/>
+			</f:facet>
+			<f:facet name = "header2">
+         		<h1>Bible Verse</h1>
+			</f:facet>
+         	<h:link outcome="index" value="Home" />	
+ 			 <h:link outcome="FirstWordForm" value="First Word" />
+ 			 <h:link outcome="CustomerLogin" value="Number of Occurences" />
+ 			 <h:link outcome="CustomerRegistration" value="Find Scripture" />
+		</h:panelGrid>
+		
+         <br /><br />
+         
+         
+      </ui:composition>	
+</h:body> 
+</html>
